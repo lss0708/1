@@ -1,0 +1,60 @@
+<!--pages/SportsConsum/SportsConsum.wxml-->
+<view class="all">
+<image class='background' src='http://a1.qpic.cn/psc?/V13wS44R2OtLTh/.35sY8zpnPlhVlJz3hDe01R*leJC6QgD3Pr80e7REzlB2O2.iUGtR8fzkXifLHKs3Czff1fCXEkRN4nYsOc02A!!/c&ek=1&kp=1&pt=0&bo=vALcBLwC3AQRADc!&tl=1&tm=1594778400&sce=0-12-12&rf=0-18'></image>
+	<view class="motto">
+		<text class="TXT">开始记录你的运动生活~</text>
+	</view>
+	<view class="select-box">
+		<view class="select-current" catchtap="openClose">
+			<text class="current-name">{{current.name}}</text>
+		</view>
+		<view class="option-list" wx:if="{{isShow}}" catchtap="optionTap">
+			<text class="option"
+        data-id="{{defaultOption.id}}"
+        data-name="{{defaultOption.name}}">{{defaultOption.name}}
+			</text>
+			<text class="option"
+        wx:for="{{result}}"
+        wx:key="{{item.id}}"
+        data-id="{{item.id}}"
+        data-name="{{item.name}}">{{item.name}}
+			</text>
+		</view>
+		<view class="count">
+			<input name="count" bindinput="getCount" class="inp" type="number" placeholder="输入你的运动量" value="{{SportTime}}"></input>
+		</view>
+		<view class="select-current2" >
+			<text class="current-name">{{Ucurrent.name}}</text>
+			<view class="option-list" wx:if="{{unitShow}}" catchtap="UoptionTap">
+				<text class="option"
+        data-id="{{UdefaultOption.id}}"
+        data-name="{{UdefaultOption.name}}">{{UdefaultOption.name}}
+				</text>
+				<text class="option"
+        wx:for="{{Uresult}}"
+        wx:key="{{item.id}}"
+        data-id="{{item.id}}"
+        data-name="{{item.name}}">{{item.name}}
+				</text>
+			</view>
+		</view>
+
+	</view>	
+	<van-button  style="margin-top:55rpx" bindtap="load" color="#ff8033" plain >添加数据</van-button>
+
+</view>
+
+
+
+<scroll-view  class="showFrame" scroll-y='true' scroll-top="{{scrollTop}}">
+	<text class="option"
+        wx:for="{{list}}"
+        wx:key="{{item.oid}}"
+        data-id="{{item.oid}}"
+        data-name="{{item.name}}" >{{item.Sport}} {{item.Count}} {{item.Unit}}消耗{{item.heat}}Kcal热量
+	</text>
+	<button class="button2" catchtap="clear">清除</button>
+	
+</scroll-view>
+
+<van-button class="button3" bindtap="writeToDB" color="#ff85bb" plain>提交记录</van-button>

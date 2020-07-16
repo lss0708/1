@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-search": "../lib/lib/search/index",
+    "van-button": "../lib/lib/button/index",
+    "van-image": "../lib/lib/image/index"
+  }
+}

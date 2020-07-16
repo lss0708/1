@@ -1,0 +1,5 @@
+{
+  "usingComponents": {"van-button": "../lib/lib/button/index",
+    "van-dropdown-menu": "../lib/lib/dropdown-menu/index",
+    "van-dropdown-item": "../lib/lib/dropdown-item/index"}
+}

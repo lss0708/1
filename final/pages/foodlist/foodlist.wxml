@@ -1,0 +1,337 @@
+<!--pages/foodlist/foodlist.wxml-->
+
+<view class="contration">
+<view class="b1">
+
+<view class="tit1">{{tit}}</view>
+<view class="border1">
+<view class="selectone">
+<van-search
+
+  value="{{ showvalue1 }}"
+  input-align="center"
+  placeholder="请输入查询的食物名称"
+  bind:change="inputone"
+/>
+
+<button class="btn" bindtap="btn">查询</button>
+
+</view>
+</view>
+</view>
+<view class="b2">
+<view class="tit2">{{tit2}}</view>
+<view class="FOOD">
+<view class="p">
+<view class="BUTTOM">
+<view class="fram">
+<view class="choosedinput">{{selectedfoodname}} </view>
+</view>
+<van-button  style="margin-left:10rpx" bindtap="btn2" type="default" color="#1ba5a3" plain>查询</van-button>
+
+</view>
+
+<view class="FOOD1">
+<view class="food1">
+<van-image
+  round
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://m.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFIQFM3qFcz25sH7Ry5N1RKt3L6LCCWXurN.AxXIO3vdppHWxKrJPK2H6ubqRWSwJNg!!/b&bo=2QEjAdkBIwERBzA!&rf=viewer_4"
+/>
+<picker bindchange="selectedDai" value="{{index}}" range="{{Dai}}">        
+ <view class="picker">奶蛋品类{{foodcal}}{{foodgram}}     
+  </view>      
+  </picker>
+</view>
+
+
+ <view class="food3">
+ <van-image
+  round
+
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFFonJ56G1vuEHf7jhkUb*Ew*w4NTKONIiqhdBvAYd9pv5pTu5IR0S8Rh2AU.3dBkUA!!/b&ek=1&kp=1&pt=0&bo=2gJpAtoCaQIRECc!&tl=3&vuin=1978468912&tm=1594796400&sce=60-4-3&rf=viewer_311"
+/>
+   <picker bindchange="selectedPou" value="{{index}}" range="{{Pou}}">        
+ <view class="picker">家禽类      
+  </view>      
+  </picker>
+  </view>
+
+  <view class="food4">
+  <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+  click="selectedPou"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFLeqVdGbj9p9vYd9TzhgvmrQebshH798X2e4o9gujLGCJ3pBYwjHzfmQugn.zYM*EA!!/b&ek=1&kp=1&pt=0&bo=GAEYARgBGAERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+   <picker bindchange="selectedSou" value="{{index}}" range="{{Sou}}">        
+ <view class="picker">酱汤类      
+  </view> 
+  </picker>
+  </view>
+ </view>
+
+ <view class="FOOD1">
+  <view class="food1">
+  <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFAg*wXuywn38gfQv.Au.GlBSbC1PujU54dIIhrDDW0IkuJueM7zlpqbVv91rc0vCKw!!/b&ek=1&kp=1&pt=0&bo=gAJ6AoACegIRECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+     <picker bindchange="selectedSau" value="{{index}}" range="{{Sau}}">        
+ <view class="picker">午餐肉类     
+  </view> 
+  </picker>
+</view>
+<view class="food3">
+    <van-image
+  round
+
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFDv.kHLKKgAIdR5sffhoE1dqrriImMQ.4SPu5UhA2MqvtD7F1EXlg8JdVfXjslbCQw!!/b&ek=1&kp=1&pt=0&bo=9gF4AfYBeAERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+     <picker bindchange="selectedFru" value="{{index}}" range="{{Fru}}">        
+ <view class="picker">水果类    
+  </view> 
+  </picker>
+  </view>
+
+  <view class="food4">
+      <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFCDnBL4fg.tAzYR2FKYQ6Y.Upf6Nb*7lR.Gy5LN76qTA5EY1G1Yk5Gkh*ZzrZIr*7A!!/b&ek=1&kp=1&pt=0&bo=igLtAYoC7QERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedPor" value="{{index}}" range="{{Por}}">        
+ <view class="picker">猪肉类   
+  </view> 
+  </picker>
+   </view>
+
+     
+ </view>
+
+  <view class="FOOD1">
+  <view class="food1">
+          <van-image
+  round
+
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFGov8ILovB6XKsDdRK9fJf99XbgKBibGwVff6rtq7.OGRY5ofVVEs71R0xK5D6WBoQ!!/b&ek=1&kp=1&pt=0&bo=WgEsAVoBLAERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedBre" value="{{index}}" range="{{Bre}}">        
+ <view class="picker">麦片类     
+  </view> 
+  </picker>
+    </view>
+
+     <view class="food3">
+               <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFKG6s3hbaqIMl*19tXyBQSCnXFliGKGxY6fJbPna4cYB7r3nKjyIJVKWvrfe4Lckgg!!/b&ek=1&kp=1&pt=0&bo=9AFMAfQBTAERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedVeg" value="{{index}}" range="{{Veg}}">        
+ <view class="picker">蔬菜类   
+  </view> 
+  </picker>
+   </view>
+
+       <view class="food4">
+                    <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFCIQQfZDkJGoiFs3w5JwgKlpmi3DDtqw9cMXLox*gXBbKNKS83ktH3XCSJtSuyHpdg!!/b&ek=1&kp=1&pt=0&bo=XgFeAV4BXgERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedNut" value="{{index}}" range="{{Nut}}">        
+ <view class="picker">干果类
+     
+  </view> 
+  </picker>
+   </view>
+
+
+
+
+   
+ </view>
+  <view class="FOOD1">
+   <view class="food1">
+  <van-image
+  round
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFBc460RkT7gyGiFEAWAnDjrOcJrBU81Jbf1IkY3dfezfTJ8PCKbdZqGUMlPzjXR7DQ!!/b&ek=1&kp=1&pt=0&bo=AQIsAQECLAERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedBee" value="{{index}}" range="{{Bee}}">        
+ <view class="picker">牛肉类    
+  </view> 
+  </picker>
+    </view> 
+   <view class="food3">
+     <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFKXW9TNizQcQZy.qNWKGrd3bsd6QH1OikbkqEpQoEv0tnr6S3TAJ.c0iSb.hnyw2Jw!!/b&ek=1&kp=1&pt=0&bo=pwEEAacBBAERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedBev" value="{{index}}" range="{{Bev}}">        
+ <view class="picker">饮料类    
+  </view> 
+  </picker>
+    </view>
+     
+     <view class="food4">
+         <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFERJJUHxsA.3z9gq*fcyxDoKd8EtLfxOFzV7iWCStMTjdYdexkYsSUWKaBPOsvJZ3g!!/b&ek=1&kp=1&pt=0&bo=gAKEAYAChAERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedFin" value="{{index}}" range="{{Fin}}">   
+           
+ <view class="picker">海鲜类   
+  </view> 
+  </picker>
+   </view>
+ </view> 
+  <view class="FOOD1">
+   <view class="food1">
+ <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFFyOpMwH7qNEg38gkf2IYjRGZwt1qSsphyHasR7FePNUlCD1tPaAlck*yON71R*XwQ!!/b&ek=1&kp=1&pt=0&bo=JAIsASQCLAERECc!&tl=1&vuin=1978468912&tm=1594796400&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedLeg" value="{{index}}" range="{{Leg}}">        
+ <view class="picker">豆制类  
+  </view> 
+  </picker>
+  </view> 
+
+   <view class="food3">
+   <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFNYd2EaTrE5bCF55.77BoiNWMGfCNuMfJjXqvtCWbKfr*pTC4nYK5.OKUrvfI1H.IA!!/b&ek=1&kp=1&pt=0&bo=WAJYAlgCWAIRECc!&tl=1&vuin=1978468912&tm=1594800000&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedLam" value="{{index}}" range="{{Lam}}">  
+
+ <view class="picker">羔羊肉类  
+  </view> 
+  </picker>
+   </view> 
+
+    <view class="food4">
+      <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFFQbMzs4yE4E7aB.OqulEKhfNGkCMVzK9K5c7MF6mAC40ykVnw*yj9shkDOVjwBLzQ!!/b&ek=1&kp=1&pt=0&bo=JgIsASYCLAERECc!&tl=1&vuin=1978468912&tm=1594800000&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedBak" value="{{index}}" range="{{Bak}}">        
+ <view class="picker">烘烤类    
+  </view> 
+  </picker>
+  </view> 
+</view> 
+ <view class="FOOD1">
+   <view class="food1">
+       <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFBoucAm7lsZWI66iT9XJt8jr3vWpi.Mg2f88bywfUz0lZ8xFlrq9aS94Kal8r.S*wA!!/b&ek=1&kp=1&pt=0&bo=XgFeAV4BXgERECc!&tl=1&vuin=1978468912&tm=1594800000&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedSna" value="{{index}}" range="{{Sna}}">        
+ <view class="picker">零食类  
+  </view> 
+  </picker>
+  </view> 
+
+   <view class="food3">
+          <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFJfEYNK.DsEyPRrWjyRceHMxlo3BlWg6WSjJi*GJVaM90sHqUh4aPIdeX.b42mI0Bg!!/b&ek=1&kp=1&pt=0&bo=gAKSAYACkgERECc!&tl=1&vuin=1978468912&tm=1594800000&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedSwe" value="{{index}}" range="{{Swe}}">        
+ <view class="picker">糖果类   
+  </view> 
+  </picker>
+   </view> 
+
+    <view class="food4">
+              <van-image
+  round
+ 
+  width="5rem"
+  height="5rem"
+  fit="cover"
+ src="http://a1.qpic.cn/psc?/V13wS44R2OtLTh/5wiqntIl0jDFEL8Nm8MbFOnKZGio.yMsYZqUaESmiU189X*IgW4CX*1cU28.LNO9QDtaZjeUb02ILLpepdKhYw!!/b&ek=1&kp=1&pt=0&bo=wgFNAcIBTQERECc!&tl=1&vuin=1978468912&tm=1594800000&sce=50-1-1&rf=viewer_311"
+/>
+      <picker bindchange="selectedCer" value="{{index}}" range="{{Cer}}">        
+ <view class="picker">谷物类    
+  </view> 
+  </picker>
+   </view> 
+</view> 
+</view>
+  
+</view>
+</view>
+</view>
+
+<view class="b3">
+<view class="tit3">{{tit3}}</view>
+<view class="selects">
+<view class="selecttwo" >
+<input class="inputtwo" placeholder="如未查询到请自行输入摄入热量/kcal" bindinput="inputtwo" value="{{showvalue}}">
+</input>
+<button class="btn3" bindtap="submit">
+添加
+</button>
+</view>
+</view>
+</view>

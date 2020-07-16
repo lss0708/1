@@ -1,0 +1,24 @@
+<view class class="contrain">
+<image class='background' src='http://a1.qpic.cn/psc?/V13wS44R2OtLTh/.35sY8zpnPlhVlJz3hDe0xZC0KVjYB9KfUN3tH*Z03Cqf8e9.eDoceJEnjU8JHi*ALG8vYksb0T4he9ayGKr9g!!/c&ek=1&kp=1&pt=0&bo=pQHmAaUB5gERADc!&tl=1&tm=1594713600&sce=0-12-12&rf=0-18'></image>
+
+<view  class="top" >{{select}}</view>
+
+<view class="mid">
+<van-search
+  value="{{ value }}"
+  clearable="true"
+  field-class="btton"
+  placeholder="请输入查询食物名称"
+  input-align="center"
+  shape="round"
+  background="#D3D3D3"
+  use-action-slot
+  bind:change="inputone"
+  bind:clear="cler"
+>
+  <view slot="action" style="font-size:" bind:tap="btn">搜索</view>
+</van-search>
+</view>
+
+
+</view> 

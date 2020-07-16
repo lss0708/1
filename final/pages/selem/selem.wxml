@@ -1,0 +1,33 @@
+
+<view class="all">
+<image class='background' src='http://a1.qpic.cn/psc?/V13wS44R2OtLTh/.35sY8zpnPlhVlJz3hDe01vYgAUmn*AyzmucIX1gIgh4VsCZR6U0kwNIKI4t1WgN8UVZWXz2q1jhLslfGijWqg!!/b&ek=1&kp=1&pt=0&bo=vAIZBLwCGQQRADc!&tl=1&tm=1594803600&sce=0-12-12&rf=viewer_311'></image>
+
+<view class="tittle">{{ttitle}}</view>
+<view class="c">
+
+ <view class="partleft"> 
+<view class="foodtitle">
+<view class="foodtitle1">
+{{foodnames}}
+</view>
+</view>
+<view class="foodname">{{name}}
+ </view>
+</view>
+</view>
+<view class="partleft">
+<view class="foodtitle">
+<view class="foodtitle1">
+{{ttitle2}}
+</view>
+</view>
+<view class="partrigh2">
+<view class="top">
+每{{m}}g
+</view>
+<view class="down">
+所含热量{{kcal}}kcal
+</view>
+</view>
+</view>
+</view>

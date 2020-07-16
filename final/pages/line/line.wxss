@@ -1,0 +1,59 @@
+/* pages/line/line.wxss */
+/**index.wxss**/
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.table2{
+margin-top: 40px;
+}
+.pict{
+margin-top: 200rpx;
+margin-left: 100rpx;
+
+
+
+ opacity:0.6 ;
+}
+.pict3{
+  margin-left: 50px;
+
+}
+.container{
+  margin:5px,0,0,0;
+   position: absolute; 
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.table {
+  font-size: 24rpx;
+ 
+  border: 1rpx solid #dadada;
+ }
+ .tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+ }
+ .td {
+  padding: 10rpx;
+  border-bottom: 1rpx solid #dadada;
+  border-right: 1rpx solid #dadada;
+  text-align: center;
+  width: 100%;
+ }
+ .Pag1{
+width: 100%;
+height: 100%;
+ }
+.Pag2{
+  width: 100%;
+  height: 100%;
+}
