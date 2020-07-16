@@ -6,7 +6,6 @@
 <view class="mid">
 <van-search
   value="{{ value }}"
-  clearable="true"
   field-class="btton"
   placeholder="请输入查询食物名称"
   input-align="center"

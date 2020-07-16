@@ -7,6 +7,7 @@ Page({
    */
 
   data: {
+    indicatorDots: true,
     show: false,
     tips:"tips:点击",
     consumecal:0,
@@ -22,9 +23,9 @@ Page({
     DBW:app.aData.dbw,
     kg:'KG',
     slider: [
-      {picUrl: 'http://5b0988e595225.cdn.sohucs.com/images/20190202/d9c8af556f4e4b979fd798922b8e5c95.jpeg'},
-      {picUrl: 'http://5b0988e595225.cdn.sohucs.com/images/20181113/36d88f9de5954fbc9a4cfe2a7392144a.jpeg'},
-      {picUrl: 'http://img.mp.itc.cn/upload/20160510/2f385847f13f469483518f6307643ac4_th.jpg'},
+      {picUrl: 'http://a1.qpic.cn/psc?/V13wS44R2OtLTh/.35sY8zpnPlhVlJz3hDe0wOAcuBRmAAcZ0wJoZmKKDI6Wg3.woOfyETe4YDptr2WoRvRwv5phfLWprMqpu07Kw!!/b&ek=1&kp=1&pt=0&bo=tQHlALUB5QARADc!&tl=1&tm=1594872000&sce=0-12-12&rf=viewer_311'},
+      {picUrl: 'http://a1.qpic.cn/psc?/V13wS44R2OtLTh/.35sY8zpnPlhVlJz3hDe0ydap4fIe*FCAO36ViL*BtOgsrpdHpwuo5QEfmWtvk.DwsexyUpOufXMm9T5AS6OwA!!/b&ek=1&kp=1&pt=0&bo=qgFHAKoBRwARADc!&tl=1&tm=1594872000&sce=0-12-12&rf=viewer_311'},
+      {picUrl: 'http://a1.qpic.cn/psc?/V13wS44R2OtLTh/.35sY8zpnPlhVlJz3hDe0.lcHPc3lLnzSz*UzChnfjjn1HcxJZCoixXMEuPH1ktPsLAihY3QgKZy2mE2lDb.DQ!!/b&ek=1&kp=1&pt=0&bo=iwF2AIsBdgARADc!&tl=1&vuin=1978468912&tm=1594872000&sce=50-1-1&rf=viewer_311'},
    
       ],
       swiperCurrent: 0,
@@ -45,6 +46,7 @@ Page({
     }
 
   ,
+ 
 
   jump: function (e) {
 

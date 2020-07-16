@@ -14354,17 +14354,12 @@ Veg2:["Horseradish-tree, pods, raw"
        this.setData({selectedfoodname:'当前选择的食物'})
   },
   inputone:function(e){
-    // wx.showLoading({
-    //   title: '加载中',
-    //   complete: (res) => {},
-    //   fail: (res) => {},
-    //   mask: true,
-    //   success: (res) => {},
-    // })
     console.log(e)
     this.setData({
       showvalue1:e.detail,
+    
     })
+    
   },
   btn:function(e){ 
     var that=this

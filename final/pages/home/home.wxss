@@ -152,6 +152,13 @@
 
 
 
+.swiper image {
+  width: 100%;
+  height: auto;
+}
+
+
+
 .swiper-container2{
   
   position: relative;
